@@ -41,7 +41,7 @@ function buildScript(file, watch) {
     return stream
       .on('error', handleErrors)
       .pipe(source(file))
-      .pipe( streamify(uglify()) )
+      //.pipe( streamify(uglify()) )
       .pipe(rename(function (path) {
         path.basename = "angular-formly-mongoose";
       }))
