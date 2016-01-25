@@ -25,7 +25,7 @@ function buildScript(file, watch) {
 
   var props = {
     entries: ['./src/' + file],
-    debug : true,
+    debug : false,
     transform:  [
       [ stringify, { extensions: ['.html'], minify: true }],
       [ babelify, {'presets': ['es2015']}]
